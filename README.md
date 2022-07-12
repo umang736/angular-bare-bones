@@ -1,6 +1,10 @@
-# AngularBareBones
+# Setup
+Download Nodejs v14+ from https://nodejs.org/en/download/ or install node version manager from https://github.com/coreybutler/nvm-windows/releases
+and then install node v14+
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
+# AngularBareBones
+This project was generated with node v14.18.1 and [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
+Its has an App module, multiple components, a data service, routing, makes HTTP GET calls for movies data from a public REST json API.
 
 ## Development server
 

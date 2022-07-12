@@ -23,20 +23,21 @@ export class FeatureComponent implements OnInit {
     this.loading = true;
     this.errorMessage = "";
     this.dataService.getMoviesData(this.moviesYear)
-      .subscribe(
-        (responseJson) => {                           //next() callback
+      .subscribe({
+        next: (responseJson) => {                           //next() callback
           console.log('responseJson received')
           this.movies = responseJson.data; 
         },
-        (error) => {                              //error() callback
+        error: (error) => {                              //error() callback
           console.error('Request failed with error')
           this.errorMessage = error;
           // this.loading = false;
         },
-        () => {                                   //complete() callback
+        complete: () => {                                   //complete() callback
           console.error('Request completed')      
           this.loading = false; 
-        })
+        }
+      })
   }
 
 }

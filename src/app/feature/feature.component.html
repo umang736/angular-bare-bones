@@ -1,3 +1,43 @@
-<h2>Application Feature Loaded!</h2>
+<h2>Movies Title!</h2>
+
+<h1 class="heading"><strong>HTTP GET</strong> Example</h1>
+ 
+<div class="form-group">
+  <label for="moviesYear">Movies Year</label>
+  <input type="text" class="form-control" id="moviesYear" [(ngModel)]="moviesYear">
+</div>
+ 
+<div class="form-group" style="margin-top: 20px; text-align: center;">
+  <button type="button" (click)="getMoviesData()">Get Movies Data</button>
+</div>
+ 
+<div *ngIf="loading">loading...</div>
+ 
+<div *ngIf="errorMessage" class="alert alert-warning">
+  <strong>Warning!</strong> {{errorMessage | json}}
+</div>
+ 
+ 
+<h2><strong>Movies List will come here</strong></h2>
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th>imdbID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies;">
+      <td>{{movie.Title}}</td>
+      <td>{{movie.Year}}</td>
+      <td>{{movie.imdbID}}</td>
+    </tr>
+  </tbody>
+</table>
+ 
+<h2><strong>Movies Json will come here</strong></h2>
+<pre>{{movies | json}}</pre>
+ 
 <!-- <br />
 <a routerLink="/">Back to Home</a> -->

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../model/movie';
+import { DataService } from '../shared/data.service';
 
 @Component({
   selector: 'app-feature',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeatureComponent implements OnInit {
 
-  constructor() { }
+  moviesYear: number = 1900;
+  movies: Movie[] = [];
+  loading: boolean = false;
+  errorMessage: string | undefined;
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    // this.getMoviesData(2015);
+  }
+
+  public getMoviesData() {
+    this.loading = true;
+    this.errorMessage = "";
+    this.dataService.getMoviesData(this.moviesYear)
+      .subscribe(
+        (responseJson) => {                           //next() callback
+          console.log('responseJson received')
+          this.movies = responseJson.data; 
+        },
+        (error) => {                              //error() callback
+          console.error('Request failed with error')
+          this.errorMessage = error;
+          // this.loading = false;
+        },
+        () => {                                   //complete() callback
+          console.error('Request completed')      
+          this.loading = false; 
+        })
   }
 
 }

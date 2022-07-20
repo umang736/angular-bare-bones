@@ -8,7 +8,8 @@ Its has an App module, multiple components, a data service, routing, makes HTTP 
 
 ## Development server
 
-Run `ng serve` for a web server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a web server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. \
+Sample app can be viewed at https://angular-ivy-eajmf8.stackblitz.io/
 
 ## Code scaffolding
 

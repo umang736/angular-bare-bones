@@ -17,12 +17,12 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-Following scripts are useful:
+Following scripts are useful:\
     `"electron-start-UI-hosted-server": starts electron app and loads hosted webiste`.\
     `"electron-start-UI-local-server":starts electron app and loads local angular server`.\
     `"electron-start-UI-local": starts  electron app with locally built code in dist/`.\
-    `"electron-build-start-UI-local": builds local code and starts electron app`.\
-    `"start": starts angular server`.
+    `"electron-build-start-UI-local": builds local code and starts electron app`.(default config to start electron app)\
+    `"start": starts angular server`.(default config to start angular app)
 
 ## Running unit tests
 

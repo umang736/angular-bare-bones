@@ -55,8 +55,9 @@ export class AmchartsComponent implements OnInit {
   }
 
   public getDummyGraphData() {
-    // this.seriesCount = Math.round(Math.random()*10); 
-    // this._updateChartV2();
+    this.seriesCount = Math.round(Math.random()*10); 
+    this._updateChartV2();
+/*
     this.loading = true;
     this.errorMessage = "";
     this.dataService.getGraphDataLineSeriesCount()
@@ -75,6 +76,7 @@ export class AmchartsComponent implements OnInit {
           this.loading = false; 
         }
     });
+  */  
   }
 
   protected _createChartV2(): void {

@@ -8,8 +8,8 @@ import { map, catchError} from 'rxjs/operators';
 })
 export class DataService {
 
-  moviesUrl: string = 'https://jsonmock.hackerrank.com/api/movies';
-  // moviesUrl: string = 'http://localhost:3000/movies';
+  // moviesUrl: string = 'https://jsonmock.hackerrank.com/api/movies';
+  moviesUrl: string = 'http://localhost:3000/movies';
   getGraphDataLineSeriesCountUrl: string = 'http://localhost:3000/graph-data/line-series/count';
   
   constructor(private http: HttpClient) { }

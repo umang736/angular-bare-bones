@@ -22,7 +22,8 @@ Following scripts are useful:\
     `"electron-start-UI-local-server":starts electron app and loads local angular server`.\
     `"electron-start-UI-local": starts  electron app with locally built code in dist/`.\
     `"electron-build-start-UI-local": builds local code and starts electron app`.(default config to start electron app)\
-    `"start": starts angular server`.(default config to start angular app)
+    `"start": starts angular server`.(default config to start angular app)\
+Sample command: npm run start
 
 ## Running unit tests
 

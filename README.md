@@ -8,7 +8,7 @@ Its has an App module, multiple components, a data service, routing, makes HTTP 
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a web server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -18,11 +18,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 Following scripts are useful:
-    `"electron-start-UI-hosted-server": starts electron app and loads hosted webiste`
-    `"electron-start-UI-local-server":starts electron app and loads local angular server`
-    `"electron-start-UI-local": starts  electron app with locally built code in dist/`
-    `"electron-build-start-UI-local": builds local code and starts electron app`,
-    `"start": starts angular server`,
+    `"electron-start-UI-hosted-server": starts electron app and loads hosted webiste`.
+    `"electron-start-UI-local-server":starts electron app and loads local angular server`.
+    `"electron-start-UI-local": starts  electron app with locally built code in dist/`.
+    `"electron-build-start-UI-local": builds local code and starts electron app`.
+    `"start": starts angular server`.
 
 ## Running unit tests
 

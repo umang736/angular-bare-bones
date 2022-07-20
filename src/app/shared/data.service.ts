@@ -9,6 +9,9 @@ import { map, catchError} from 'rxjs/operators';
 export class DataService {
 
   moviesUrl: string = 'https://jsonmock.hackerrank.com/api/movies';
+  // moviesUrl: string = 'http://localhost:3000/movies';
+  getGraphDataLineSeriesCountUrl: string = 'http://localhost:3000/graph-data/line-series/count';
+  
   constructor(private http: HttpClient) { }
 
   getProjectName() {
@@ -19,6 +22,19 @@ export class DataService {
     const params = new HttpParams()
     .set('Year', year);
     return this.http.get<any>(this.moviesUrl, { 'params': params })
+    .pipe(
+      map((responseJson) => {
+        return responseJson;
+      }),
+      catchError((err, caught) => {
+        console.error(err);
+        throw err;
+      })
+    )
+  }
+
+  getGraphDataLineSeriesCount(): Observable<any> {
+    return this.http.get<any>(this.getGraphDataLineSeriesCountUrl)
     .pipe(
       map((responseJson) => {
         return responseJson;

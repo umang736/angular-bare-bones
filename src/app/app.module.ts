@@ -10,13 +10,15 @@ import { HomeComponent } from './home/home.component';
 import { DataService } from './shared/data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AmchartsComponent } from './amcharts/amcharts.component';
+import { D3multilinechartComponent } from './d3multilinechart/d3multilinechart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FeatureComponent,
     HomeComponent,
-    AmchartsComponent
+    AmchartsComponent,
+    D3multilinechartComponent
   ],
   imports: [
     BrowserModule,
